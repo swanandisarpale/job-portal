@@ -1,0 +1,759 @@
+/* =========================================================
+   JOB PORTAL - COMPANY MANAGEMENT
+   BLACK + LIGHT RED PROFESSIONAL THEME
+========================================================= */
+
+:root {
+    --black: #111111;
+    --dark-black: #1b1b1b;
+    --red: #e63946;
+    --light-red: #ff6b6b;
+    --very-light-red: #fff1f2;
+    --border: #eeeeee;
+    --text: #333333;
+    --muted: #777777;
+    --white: #ffffff;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    background: #f5f6f8 !important;
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+#page-wrapper {
+    background: #f5f6f8 !important;
+}
+
+#page-inner {
+    background: transparent !important;
+    padding: 25px 30px;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    padding: 0 0 15px 0;
+    border-bottom: none !important;
+
+    color: var(--black);
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.page-header:after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    background: var(--red);
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.page-header i {
+    color: var(--red);
+    margin-right: 8px;
+}
+
+
+/* =========================================================
+   PANELS
+========================================================= */
+
+.panel {
+    border: none !important;
+    border-radius: 12px !important;
+    background: var(--white);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.panel-heading {
+    background: var(--black) !important;
+    color: white !important;
+
+    border: none !important;
+    padding: 16px 20px !important;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.panel-heading i {
+    color: var(--light-red);
+    margin-right: 8px;
+}
+
+.panel-body {
+    background: white;
+    padding: 25px !important;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    color: var(--black);
+    font-size: 13px;
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.form-control {
+    height: 42px;
+
+    border: 1px solid #dddddd !important;
+    border-radius: 7px !important;
+
+    background: #ffffff !important;
+    color: #333333;
+
+    box-shadow: none !important;
+
+    padding: 9px 12px;
+
+    transition: all 0.25s ease;
+}
+
+.form-control:hover {
+    border-color: #cccccc !important;
+}
+
+.form-control:focus {
+    border-color: var(--red) !important;
+
+    box-shadow:
+        0 0 0 3px rgba(230, 57, 70, 0.10) !important;
+
+    outline: none;
+}
+
+textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.form-control::placeholder {
+    color: #aaaaaa;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+select.form-control {
+    cursor: pointer;
+}
+
+select.form-control:disabled {
+    background: #f1f1f1 !important;
+    color: #999999;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.btn-primary {
+    background: var(--red) !important;
+    border: none !important;
+
+    color: white !important;
+
+    border-radius: 7px !important;
+
+    padding: 9px 20px !important;
+
+    font-weight: 600;
+
+    box-shadow: 0 3px 8px rgba(230, 57, 70, 0.25);
+
+    transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+    background: #c92f3b !important;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 5px 12px rgba(230, 57, 70, 0.30);
+}
+
+.btn-primary i {
+    margin-right: 5px;
+}
+
+
+/* =========================================================
+   RESET BUTTON
+========================================================= */
+
+.btn-default {
+    background: var(--black) !important;
+    border: none !important;
+
+    color: white !important;
+
+    border-radius: 7px !important;
+
+    padding: 9px 20px !important;
+
+    font-weight: 600;
+
+    margin-left: 5px;
+
+    transition: all 0.25s ease;
+}
+
+.btn-default:hover {
+    background: #333333 !important;
+    color: white !important;
+
+    transform: translateY(-1px);
+}
+
+.btn-default i {
+    margin-right: 5px;
+}
+
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.alert {
+    border: none !important;
+    border-radius: 8px !important;
+
+    padding: 14px 18px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.alert-success {
+    background: #edfaef !important;
+    color: #247a38 !important;
+
+    border-left: 4px solid #28a745 !important;
+}
+
+.alert-danger {
+    background: var(--very-light-red) !important;
+    color: #b4232f !important;
+
+    border-left: 4px solid var(--red) !important;
+}
+
+
+/* =========================================================
+   COMPANY TABLE CONTAINER
+========================================================= */
+
+.table-responsive {
+    border: none !important;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+#companyTable {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0;
+    background: white;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+#companyTable thead th {
+    background: var(--black) !important;
+    color: white !important;
+
+    border: none !important;
+
+    padding: 14px 12px !important;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+
+    white-space: nowrap;
+}
+
+
+/* first header corner */
+
+#companyTable thead th:first-child {
+    border-radius: 6px 0 0 0;
+}
+
+
+/* last header corner */
+
+#companyTable thead th:last-child {
+    border-radius: 0 6px 0 0;
+}
+
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+#companyTable tbody td {
+    padding: 13px 12px !important;
+
+    border-top: 1px solid #eeeeee !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+
+    color: #444444;
+
+    font-size: 13px;
+
+    vertical-align: middle;
+}
+
+
+/* =========================================================
+   ALTERNATE ROW
+========================================================= */
+
+#companyTable tbody tr:nth-child(even) {
+    background: #fff8f8;
+}
+
+
+/* =========================================================
+   ROW HOVER
+========================================================= */
+
+#companyTable tbody tr {
+    transition: all 0.2s ease;
+}
+
+#companyTable tbody tr:hover {
+    background: #ffe9eb !important;
+
+    box-shadow: inset 3px 0 0 var(--red);
+}
+
+
+/* =========================================================
+   COMPANY NAME
+========================================================= */
+
+.company-name {
+    color: var(--black) !important;
+
+    font-weight: 700 !important;
+}
+
+
+/* =========================================================
+   ID COLUMN
+========================================================= */
+
+#companyTable tbody td:first-child {
+    color: var(--red);
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   WEBSITE BUTTON
+========================================================= */
+
+.website-btn {
+    background: var(--black) !important;
+    border: none !important;
+
+    color: white !important;
+
+    border-radius: 5px !important;
+
+    padding: 6px 10px !important;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+.website-btn:hover {
+    background: var(--red) !important;
+    color: white !important;
+
+    transform: translateY(-1px);
+}
+
+.website-btn i {
+    margin-right: 4px;
+}
+
+
+/* =========================================================
+   DELETE BUTTON
+========================================================= */
+
+.action-btn {
+    background: var(--red) !important;
+    border: none !important;
+
+    color: white !important;
+
+    min-width: 78px;
+    height: 32px;
+
+    padding: 6px 10px !important;
+
+    border-radius: 5px !important;
+
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    box-shadow: 0 2px 6px rgba(230, 57, 70, 0.20);
+
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    background: #bd2633 !important;
+
+    color: white !important;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 4px 9px rgba(230, 57, 70, 0.28);
+}
+
+.action-btn i {
+    margin-right: 5px;
+}
+
+
+/* =========================================================
+   DATATABLE TOP AREA
+========================================================= */
+
+.dataTables_wrapper {
+    padding-top: 5px;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.dataTables_filter {
+    margin-bottom: 15px;
+}
+
+.dataTables_filter label {
+    color: #555;
+    font-weight: 600;
+}
+
+.dataTables_filter input {
+    height: 36px !important;
+
+    margin-left: 8px !important;
+
+    padding: 6px 12px !important;
+
+    border: 1px solid #dddddd !important;
+
+    border-radius: 6px !important;
+
+    outline: none;
+
+    box-shadow: none !important;
+}
+
+.dataTables_filter input:focus {
+    border-color: var(--red) !important;
+}
+
+
+/* =========================================================
+   SHOW ENTRIES
+========================================================= */
+
+.dataTables_length label {
+    color: #555;
+    font-weight: 600;
+}
+
+.dataTables_length select {
+    height: 34px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 5px;
+
+    padding: 5px;
+
+    outline: none;
+}
+
+.dataTables_length select:focus {
+    border-color: var(--red);
+}
+
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+.dataTables_wrapper .dataTables_paginate {
+    margin-top: 10px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border: 1px solid #eeeeee !important;
+
+    background: white !important;
+
+    color: var(--black) !important;
+
+    border-radius: 5px !important;
+
+    margin: 2px;
+
+    padding: 5px 10px !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: var(--red) !important;
+    border-color: var(--red) !important;
+
+    color: white !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background: var(--red) !important;
+    border-color: var(--red) !important;
+
+    color: white !important;
+}
+
+
+/* =========================================================
+   DATATABLE INFO
+========================================================= */
+
+.dataTables_info {
+    color: #777777;
+
+    font-size: 12px;
+
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.navbar-side {
+    background: var(--black) !important;
+}
+
+.sidebar-collapse {
+    background: var(--black) !important;
+}
+
+#main-menu {
+    background: var(--black) !important;
+}
+
+#main-menu li {
+    background: var(--black) !important;
+}
+
+#main-menu li a {
+    color: #eeeeee !important;
+
+    background: var(--black) !important;
+
+    border-bottom: 1px solid #292929 !important;
+
+    transition: all 0.2s ease;
+}
+
+#main-menu li a:hover {
+    background: #242424 !important;
+    color: white !important;
+
+    border-left: 4px solid var(--red);
+}
+
+#main-menu li a.active-menu {
+    background: var(--red) !important;
+    color: white !important;
+
+    border-left: 4px solid #ff9a9f !important;
+}
+
+#main-menu li a i {
+    color: var(--light-red);
+}
+
+#main-menu li a:hover i,
+#main-menu li a.active-menu i {
+    color: white;
+}
+
+
+/* =========================================================
+   TOP NAVBAR
+========================================================= */
+
+.navbar-cls-top {
+    background: var(--black) !important;
+
+    border-bottom: 3px solid var(--red) !important;
+}
+
+.navbar-brand {
+    background: var(--black) !important;
+
+    color: white !important;
+
+    font-weight: 700;
+
+    font-size: 20px;
+}
+
+.navbar-brand:hover {
+    color: var(--light-red) !important;
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.navbar-cls-top .btn-danger {
+    background: var(--red) !important;
+
+    border: none !important;
+
+    border-radius: 5px;
+
+    font-weight: 600;
+}
+
+.navbar-cls-top .btn-danger:hover {
+    background: #c92f3b !important;
+}
+
+
+/* =========================================================
+   USER IMAGE
+========================================================= */
+
+.sidebar-collapse .text-center {
+    background: var(--black) !important;
+
+    padding: 22px 10px;
+}
+
+.user-image {
+    border: 3px solid var(--red);
+
+    padding: 3px;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    #page-inner {
+        padding: 15px;
+    }
+
+    .page-header {
+        font-size: 22px;
+    }
+
+    .panel-body {
+        padding: 18px !important;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    #companyTable thead th,
+    #companyTable tbody td {
+        font-size: 11px;
+        padding: 9px 8px !important;
+    }
+
+    .dataTables_filter {
+        text-align: left !important;
+        float: none !important;
+    }
+
+    .dataTables_filter input {
+        width: 100%;
+        margin: 7px 0 10px 0 !important;
+    }
+
+    .action-btn {
+        min-width: 70px;
+    }
+}
