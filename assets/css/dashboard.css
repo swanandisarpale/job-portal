@@ -1,0 +1,819 @@
+/* =====================================================
+   BLACK + LIGHT RED JOB PORTAL THEME
+===================================================== */
+
+body {
+    background: #f6f6f6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#page-wrapper {
+    background: #f6f6f6;
+}
+
+#page-inner {
+    padding: 25px;
+}
+
+
+/* =====================================================
+   WELCOME HEADER
+===================================================== */
+
+.welcome-section {
+
+    position: relative;
+
+    padding: 32px 35px;
+
+    border-radius: 18px;
+
+    margin-bottom: 25px;
+
+    color: #ffffff;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111111 0%,
+            #1c1c1c 65%,
+            #2a1111 100%
+        );
+
+    border-left: 5px solid #ff6b6b;
+
+    box-shadow:
+        0 10px 28px rgba(0,0,0,0.15);
+}
+
+.welcome-section:before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    right: -90px;
+    top: -110px;
+
+    border-radius: 50%;
+
+    background: rgba(255,107,107,0.15);
+}
+
+.welcome-section:after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: 150px;
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(255,107,107,0.08);
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-section h1 {
+
+    margin: 0 0 8px 0;
+
+    font-size: 30px;
+
+    font-weight: 700;
+}
+
+.welcome-section p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    color: #dddddd;
+}
+
+.welcome-user {
+
+    margin-top: 18px;
+
+    font-size: 13px;
+
+    color: #eeeeee;
+}
+
+.online-status {
+
+    float: right;
+
+    padding: 9px 16px;
+
+    border-radius: 30px;
+
+    background: rgba(255,107,107,0.12);
+
+    border: 1px solid rgba(255,107,107,0.35);
+
+    color: #ffb0b0;
+
+    font-size: 12px;
+}
+
+.online-dot {
+
+    display: inline-block;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #ff6b6b;
+
+    margin-right: 7px;
+}
+
+
+/* =====================================================
+   STAT CARDS
+===================================================== */
+
+.stat-card {
+
+    position: relative;
+
+    background: #ffffff;
+
+    border-radius: 15px;
+
+    padding: 23px;
+
+    margin-bottom: 25px;
+
+    min-height: 155px;
+
+    overflow: hidden;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.07);
+
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 28px rgba(0,0,0,0.13);
+}
+
+.stat-card:after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    right: -35px;
+    bottom: -40px;
+
+    border-radius: 50%;
+
+    background: #ff6b6b;
+
+    opacity: .10;
+}
+
+
+/* LEFT RED BORDER */
+
+.stat-blue,
+.stat-purple,
+.stat-green,
+.stat-orange {
+
+    border-left: 5px solid #ff6b6b;
+}
+
+
+/* ICON */
+
+.stat-icon {
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    float: left;
+
+    margin-right: 15px;
+
+    border-radius: 13px;
+
+    background: #fff0f0;
+
+    color: #e63946;
+
+    font-size: 23px;
+}
+
+.stat-label {
+
+    font-size: 11px;
+
+    color: #888888;
+
+    font-weight: bold;
+
+    letter-spacing: .5px;
+}
+
+.stat-number {
+
+    font-size: 29px;
+
+    font-weight: 700;
+
+    color: #151515;
+
+    margin-top: 4px;
+}
+
+.stat-link {
+
+    display: block;
+
+    margin-top: 13px;
+
+    font-size: 11px;
+
+    color: #777777;
+
+    text-decoration: none !important;
+}
+
+.stat-link:hover {
+
+    color: #e63946;
+}
+
+
+/* =====================================================
+   DASHBOARD BOX
+===================================================== */
+
+.dashboard-box {
+
+    background: #ffffff;
+
+    border-radius: 15px;
+
+    padding: 23px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.06);
+}
+
+.section-title {
+
+    margin-bottom: 20px;
+
+    padding-bottom: 14px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.section-title h3 {
+
+    margin: 0;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #222222;
+}
+
+.section-title h3 i {
+
+    color: #e63946;
+}
+
+.section-title p {
+
+    margin: 5px 0 0;
+
+    font-size: 11px;
+
+    color: #999999;
+}
+
+
+/* =====================================================
+   MANAGEMENT CENTER
+===================================================== */
+
+.module-card {
+
+    display: block;
+
+    text-align: center;
+
+    padding: 22px 10px;
+
+    margin-bottom: 18px;
+
+    background: #fafafa;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 13px;
+
+    color: #222222;
+
+    text-decoration: none !important;
+
+    transition: .3s;
+}
+
+.module-card:hover {
+
+    transform: translateY(-5px);
+
+    background: #ffffff;
+
+    border-color: #ffb0b0;
+
+    box-shadow:
+        0 9px 24px rgba(0,0,0,.09);
+}
+
+.module-icon {
+
+    width: 52px;
+    height: 52px;
+
+    line-height: 52px;
+
+    margin: auto;
+
+    margin-bottom: 12px;
+
+    border-radius: 13px;
+
+    background: #fff0f0;
+
+    color: #e63946;
+
+    font-size: 22px;
+}
+
+.module-card strong {
+
+    display: block;
+
+    font-size: 13px;
+
+    color: #222222;
+
+    margin-bottom: 5px;
+}
+
+.module-card span {
+
+    color: #999999;
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   RECRUITMENT PIPELINE
+===================================================== */
+
+.pipeline-item {
+
+    margin-bottom: 22px;
+}
+
+.pipeline-top {
+
+    font-size: 12px;
+
+    color: #555555;
+
+    margin-bottom: 8px;
+}
+
+.pipeline-top strong {
+
+    float: right;
+
+    color: #222222;
+}
+
+.progress {
+
+    height: 9px;
+
+    background: #eeeeee;
+
+    border-radius: 20px;
+
+    box-shadow: none;
+
+    margin-bottom: 0;
+}
+
+.progress-bar {
+
+    border-radius: 20px;
+
+    background: #ff6b6b;
+}
+
+.bar-pending {
+
+    background: #ffb36b;
+}
+
+.bar-shortlisted {
+
+    background: #ff8080;
+}
+
+.bar-selected {
+
+    background: #e63946;
+}
+
+.bar-rejected {
+
+    background: #555555;
+}
+
+
+/* =====================================================
+   APPLICATION STATUS
+===================================================== */
+
+.status-mini {
+
+    padding: 17px;
+
+    text-align: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 12px;
+
+    border: 1px solid #eeeeee;
+}
+
+.status-mini h4 {
+
+    margin: 0 0 5px;
+
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+.status-mini p {
+
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 10px;
+}
+
+
+/* PENDING */
+
+.status-pending {
+
+    background: #fff7ed;
+
+    border-color: #ffe2c2;
+}
+
+.status-pending h4 {
+
+    color: #f08a24;
+}
+
+
+/* SHORTLISTED */
+
+.status-shortlisted {
+
+    background: #fff1f1;
+
+    border-color: #ffd5d5;
+}
+
+.status-shortlisted h4 {
+
+    color: #ff6b6b;
+}
+
+
+/* SELECTED */
+
+.status-selected {
+
+    background: #fff0f0;
+
+    border-color: #ffcaca;
+}
+
+.status-selected h4 {
+
+    color: #e63946;
+}
+
+
+/* REJECTED */
+
+.status-rejected {
+
+    background: #f3f3f3;
+
+    border-color: #dddddd;
+}
+
+.status-rejected h4 {
+
+    color: #333333;
+}
+
+
+/* =====================================================
+   RECENT APPLICATION TABLE
+===================================================== */
+
+.recent-table {
+
+    width: 100%;
+}
+
+.recent-table th {
+
+    padding: 12px 8px !important;
+
+    font-size: 10px;
+
+    color: #999999;
+
+    text-transform: uppercase;
+
+    border-bottom: 1px solid #eeeeee !important;
+}
+
+.recent-table td {
+
+    padding: 13px 8px !important;
+
+    font-size: 12px;
+
+    vertical-align: middle !important;
+
+    border-top: 1px solid #f1f1f1 !important;
+}
+
+.candidate-name {
+
+    color: #222222;
+
+    font-weight: bold;
+}
+
+.job-name {
+
+    color: #777777;
+}
+
+.status-label {
+
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+
+    font-weight: bold;
+}
+
+.label-pending {
+
+    background: #fff1dc;
+
+    color: #c87500;
+}
+
+.label-shortlisted {
+
+    background: #ffe4e4;
+
+    color: #d94b4b;
+}
+
+.label-selected {
+
+    background: #ffdede;
+
+    color: #c72e2e;
+}
+
+.label-rejected {
+
+    background: #eeeeee;
+
+    color: #555555;
+}
+
+
+/* =====================================================
+   RECENT JOBS
+===================================================== */
+
+.job-row {
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.job-row:last-child {
+
+    border-bottom: none;
+}
+
+.job-circle {
+
+    width: 42px;
+    height: 42px;
+
+    line-height: 42px;
+
+    text-align: center;
+
+    float: left;
+
+    margin-right: 12px;
+
+    border-radius: 11px;
+
+    background: #fff0f0;
+
+    color: #e63946;
+}
+
+.job-title {
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    color: #333333;
+}
+
+.job-company {
+
+    margin-top: 4px;
+
+    font-size: 10px;
+
+    color: #999999;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.btn-default {
+
+    background: #111111;
+
+    border-color: #111111;
+
+    color: #ffffff;
+}
+
+.btn-default:hover {
+
+    background: #e63946;
+
+    border-color: #e63946;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   PORTAL INFORMATION
+===================================================== */
+
+.info-card {
+
+    padding: 23px;
+
+    border-radius: 15px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111111,
+            #252525
+        );
+
+    border-left: 5px solid #ff6b6b;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.15);
+}
+
+.info-card h4 {
+
+    margin: 0 0 8px;
+
+    font-size: 17px;
+}
+
+.info-card h4 i {
+
+    color: #ff6b6b;
+}
+
+.info-card p {
+
+    margin: 0;
+
+    font-size: 11px;
+
+    color: #cccccc;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:767px) {
+
+    #page-inner {
+
+        padding: 15px;
+    }
+
+    .welcome-section {
+
+        padding: 25px;
+    }
+
+    .welcome-section h1 {
+
+        font-size: 23px;
+    }
+
+    .online-status {
+
+        float: none;
+
+        display: inline-block;
+
+        margin-top: 15px;
+    }
+
+}
