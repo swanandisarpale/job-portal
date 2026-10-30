@@ -1,0 +1,1176 @@
+/* =========================================================
+   JOB PORTAL LOGIN
+   WHITE + RED PROFESSIONAL THEME
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+/* =========================================================
+   THEME VARIABLES
+========================================================= */
+
+:root {
+    --red: #e63946;
+    --dark-red: #c92f3b;
+    --light-red: #ff6b6b;
+
+    --soft-red: #fff1f2;
+    --very-soft-red: #fff8f8;
+
+    --white: #ffffff;
+    --off-white: #f7f8fa;
+
+    --black: #171717;
+    --text: #333333;
+    --muted: #777777;
+
+    --border: #e5e5e5;
+
+    --green: #22a06b;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 0% 0%,
+            rgba(230, 57, 70, 0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 100% 100%,
+            rgba(255, 107, 107, 0.10),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #fff7f7 100%
+        );
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATIVE RINGS
+========================================================= */
+
+body::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(230, 57, 70, 0.08);
+
+    top: -240px;
+    right: -150px;
+
+    z-index: 0;
+}
+
+body::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(230, 57, 70, 0.07);
+
+    bottom: -180px;
+    left: -130px;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   BACKGROUND CIRCLES
+========================================================= */
+
+.circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    animation: float 8s ease-in-out infinite;
+}
+
+
+.circle-one {
+    width: 280px;
+    height: 280px;
+
+    top: -140px;
+    left: -100px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(230, 57, 70, 0.20),
+            rgba(230, 57, 70, 0.02) 70%
+        );
+}
+
+
+.circle-two {
+    width: 240px;
+    height: 240px;
+
+    right: -100px;
+    bottom: -100px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 107, 107, 0.18),
+            rgba(255, 107, 107, 0.02) 70%
+        );
+
+    animation-delay: 2s;
+}
+
+
+.circle-three {
+    width: 70px;
+    height: 70px;
+
+    right: 16%;
+    top: 12%;
+
+    background:
+        rgba(230, 57, 70, 0.08);
+
+    animation-delay: 4s;
+}
+
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateY(-18px)
+            scale(1.04);
+    }
+}
+
+
+/* =========================================================
+   MAIN LOGIN PAGE
+========================================================= */
+
+.login-page {
+    width: 100%;
+    max-width: 1150px;
+
+    padding: 25px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   LOGIN WRAPPER
+========================================================= */
+
+.login-wrapper {
+    display: grid;
+
+    grid-template-columns:
+        0.95fr 1.05fr;
+
+    min-height: 630px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border:
+        1px solid rgba(230, 57, 70, 0.10);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.12),
+        0 8px 25px rgba(230, 57, 70, 0.05);
+
+    animation:
+        appear 0.7s ease;
+}
+
+
+/* =========================================================
+   MAIN APPEAR ANIMATION
+========================================================= */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   LEFT WELCOME SECTION
+========================================================= */
+
+.welcome-section {
+    padding: 60px 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    color: #ffffff;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #e63946 0%,
+            #d63340 45%,
+            #c92f3b 100%
+        );
+}
+
+
+/* Decorative white circle */
+
+.welcome-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255,255,255,0.18);
+
+    right: -175px;
+    top: -120px;
+}
+
+
+/* Second decorative circle */
+
+.welcome-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255,255,255,0.14);
+
+    left: -150px;
+    bottom: -125px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 19px;
+
+    background:
+        rgba(255,255,255,0.14);
+
+    border:
+        1px solid rgba(255,255,255,0.28);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.12);
+
+    margin-bottom: 28px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.logo i {
+    font-size: 31px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   WELCOME HEADING
+========================================================= */
+
+.welcome-section h1 {
+    font-size: 40px;
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 18px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.welcome-section h1 span {
+    display: block;
+
+    color: #ffd9dc;
+}
+
+
+/* =========================================================
+   WELCOME TEXT
+========================================================= */
+
+.welcome-section p {
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color:
+        rgba(255,255,255,0.85);
+
+    max-width: 430px;
+
+    margin-bottom: 32px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.features {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.feature {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    color:
+        rgba(255,255,255,0.92);
+
+    font-size: 13px;
+}
+
+
+.feature-icon {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255,255,255,0.13);
+
+    border:
+        1px solid rgba(255,255,255,0.16);
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   RIGHT LOGIN SECTION
+========================================================= */
+
+.form-section {
+    background: #ffffff;
+
+    padding: 60px 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.form-container {
+    width: 100%;
+
+    max-width: 390px;
+}
+
+
+/* =========================================================
+   FORM HEADER
+========================================================= */
+
+.form-header {
+    margin-bottom: 30px;
+}
+
+
+.form-header h2 {
+    font-size: 29px;
+
+    color: var(--black);
+
+    font-weight: 800;
+
+    margin-bottom: 8px;
+
+    letter-spacing: -0.7px;
+}
+
+
+.form-header p {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* Red underline */
+
+.form-header h2::after {
+    content: "";
+
+    display: block;
+
+    width: 43px;
+    height: 3px;
+
+    background: var(--red);
+
+    border-radius: 5px;
+
+    margin-top: 11px;
+}
+
+
+/* =========================================================
+   INPUT GROUP
+========================================================= */
+
+.input-group {
+    margin-bottom: 20px;
+
+    position: relative;
+}
+
+
+.input-group label {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #3c3c3c;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   INPUT WRAPPER
+========================================================= */
+
+.input-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   INPUT ICON
+========================================================= */
+
+.input-icon {
+    position: absolute;
+
+    left: 17px;
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    color: #a2a2a2;
+
+    font-size: 15px;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    transition:
+        color 0.25s ease;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.input-group input {
+    width: 100%;
+
+    height: 53px;
+
+    padding:
+        0 48px;
+
+    border:
+        1.5px solid #e4e4e4;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #fafafa;
+
+    color: #222222;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    transition:
+        all 0.25s ease;
+}
+
+
+/* Placeholder */
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+
+/* Hover */
+
+.input-group input:hover {
+    border-color:
+        #f1aeb3;
+
+    background: #ffffff;
+}
+
+
+/* Focus */
+
+.input-group input:focus {
+    border-color:
+        var(--red);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(230, 57, 70, 0.08);
+}
+
+
+/* Focus icon */
+
+.input-group input:focus + .input-icon {
+    color: var(--red);
+}
+
+
+/* =========================================================
+   PASSWORD TOGGLE
+========================================================= */
+
+.password-toggle {
+    position: absolute;
+
+    right: 15px;
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color: #a0a0a0;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    padding: 5px;
+
+    z-index: 3;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.password-toggle:hover {
+    color: var(--red);
+}
+
+
+/* =========================================================
+   FORM OPTIONS
+========================================================= */
+
+.form-options {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin:
+        5px 0 25px;
+}
+
+
+.remember {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 12px;
+
+    color: #777777;
+
+    cursor: pointer;
+}
+
+
+.remember input {
+    width: 15px;
+    height: 15px;
+
+    accent-color:
+        var(--red);
+
+    cursor: pointer;
+}
+
+
+.forgot {
+    font-size: 12px;
+
+    color: var(--red);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.forgot:hover {
+    color: var(--dark-red);
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.login-btn {
+    width: 100%;
+
+    height: 53px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e63946,
+            #c92f3b
+        );
+
+    color: #ffffff;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 22px
+        rgba(230,57,70,0.22);
+
+    transition:
+        all 0.25s ease;
+}
+
+
+/* Shimmer */
+
+.login-btn::before {
+    content: "";
+
+    position: absolute;
+
+    width: 70%;
+
+    height: 100%;
+
+    top: 0;
+
+    left: -100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.25),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        left 0.5s ease;
+}
+
+
+.login-btn:hover::before {
+    left: 130%;
+}
+
+
+.login-btn:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #d8313e,
+            #b92835
+        );
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 15px 28px
+        rgba(230,57,70,0.28);
+}
+
+
+.login-btn i {
+    transition:
+        transform 0.25s ease;
+}
+
+
+.login-btn:hover i {
+    transform:
+        translateX(5px);
+}
+
+
+.login-btn:active {
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   SECURITY
+========================================================= */
+
+.security {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 18px;
+
+    color: #999999;
+
+    font-size: 10px;
+}
+
+
+.security i {
+    color: var(--green);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer-text {
+    text-align: center;
+
+    margin-top: 23px;
+
+    padding-top: 17px;
+
+    border-top:
+        1px solid #eeeeee;
+
+    font-size: 10px;
+
+    color: #aaa;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SUBTLE FORM DECORATION
+========================================================= */
+
+.form-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(230,57,70,0.03);
+
+    right: 8%;
+    bottom: 7%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    body {
+        overflow-y: auto;
+
+        padding: 25px 0;
+    }
+
+
+    .login-page {
+        padding: 20px;
+    }
+
+
+    .login-wrapper {
+        grid-template-columns:
+            1fr 1fr;
+
+        min-height: 580px;
+    }
+
+
+    .welcome-section {
+        padding: 45px 40px;
+    }
+
+
+    .form-section {
+        padding: 45px 40px;
+    }
+
+
+    .welcome-section h1 {
+        font-size: 34px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
+    body {
+        overflow-y: auto;
+
+        padding: 20px 0;
+    }
+
+
+    .login-page {
+        padding: 15px;
+    }
+
+
+    .login-wrapper {
+        display: block;
+
+        max-width: 500px;
+
+        margin: 0 auto;
+
+        border-radius: 20px;
+    }
+
+
+    .welcome-section {
+        padding: 40px 30px;
+
+        min-height: auto;
+    }
+
+
+    .welcome-section h1 {
+        font-size: 30px;
+    }
+
+
+    .welcome-section p {
+        font-size: 13px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .features {
+        display: none;
+    }
+
+
+    .form-section {
+        padding:
+            40px 30px;
+    }
+
+
+    .form-container {
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .login-page {
+        padding: 10px;
+    }
+
+
+    .login-wrapper {
+        border-radius: 17px;
+    }
+
+
+    .welcome-section {
+        padding:
+            30px 22px;
+    }
+
+
+    .welcome-section h1 {
+        font-size: 26px;
+    }
+
+
+    .logo {
+        width: 62px;
+        height: 62px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .logo i {
+        font-size: 26px;
+    }
+
+
+    .form-section {
+        padding:
+            30px 22px;
+    }
+
+
+    .form-header h2 {
+        font-size: 24px;
+    }
+
+
+    .form-options {
+        flex-direction: column;
+
+        align-items:
+            flex-start;
+
+        gap: 11px;
+    }
+
+
+    .input-group input {
+        height: 50px;
+    }
+
+
+    .login-btn {
+        height: 50px;
+    }
+}
